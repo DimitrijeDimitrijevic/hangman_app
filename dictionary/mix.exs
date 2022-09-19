@@ -1,6 +1,8 @@
 defmodule Dictionary.MixProject do
   use Mix.Project
 
+  # Ovo se prvo izvrsava na komandu
+  ### mix run ###
   def project do
     [
       app: :dictionary,
@@ -14,6 +16,7 @@ defmodule Dictionary.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Dictionary.Runtime.Application, []},
       extra_applications: [:logger]
     ]
   end

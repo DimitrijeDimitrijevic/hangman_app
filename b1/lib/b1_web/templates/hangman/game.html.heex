@@ -1,0 +1,19 @@
+ 
+<pre>
+    <%= figure_for(@tally.turns_left) %>
+</pre> 
+<p> 
+    Turns left: <%= @tally.turns_left %>
+</p> 
+<p> 
+    Letters used: <%= @tally.used |> Enum.join(", ") %>
+</p> 
+<p> 
+    Words so far: <%= @tally.letters |> Enum.join(" ") %>
+</p> 
+
+<%= move_status(@tally.game_state) %>
+
+<%= continue_or_try_again(@conn, @tally.game_state) %>
+
+ 
